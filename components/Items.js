@@ -23,7 +23,7 @@ const Center = styled.div`
   text-align: center;
 `
 const Intro = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   a {
     color: ${props => props.theme.red};
   }

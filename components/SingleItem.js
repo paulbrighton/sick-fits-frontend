@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import Error from './ErrorMessage'
+import FormatMoney from '../lib/formatMoney'
+import AddToCart from './AddToCart'
 import styled from 'styled-components'
 import Head from 'next/head'
 
@@ -30,6 +32,7 @@ const SINGLE_ITEM_QUERY = gql`
       id
       title
       description
+      price
       largeImage
     }
   }
@@ -55,6 +58,8 @@ class SingleItem extends Component {
             <div className='details'>
               <h2>Viewing {item.title}</h2>
               <p>{item.description}</p>
+              <p>{FormatMoney(item.price)}</p>
+              <AddToCart id={item.id} />
             </div>
           </SingleItemStyles>
         }}

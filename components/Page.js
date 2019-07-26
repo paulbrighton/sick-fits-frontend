@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from './Header'
+import Footer from './Footer'
 import Meta from './Meta'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 
@@ -21,7 +22,7 @@ const StyledPage = styled.div`
 `
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
+  margin: 0 auto 125px;
   padding: 2rem;
 `
 injectGlobal`
@@ -66,6 +67,7 @@ class Page extends Component {
           <Inner>
             { this.props.children }
           </Inner>
+          <Footer />
         </StyledPage>
       </ThemeProvider>
     )
