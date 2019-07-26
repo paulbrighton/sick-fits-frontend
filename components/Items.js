@@ -34,6 +34,7 @@ const Intro = styled.p`
 const Title = styled.h1`
   font-size: 5rem;
   margin-bottom: 0;
+  color: ${props => props.theme.red};
 `
 
 const ItemsList = styled.div`
