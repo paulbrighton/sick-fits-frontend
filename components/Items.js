@@ -22,6 +22,19 @@ const ALL_ITEMS_QUERY = gql`
 const Center = styled.div`
   text-align: center;
 `
+const Intro = styled.p`
+  font-size: 1.5rem;
+  a {
+    color: ${props => props.theme.red};
+  }
+  a:hover {
+    border-bottom: 1px solid #FF5A5F;
+  }
+`
+const Title = styled.h1`
+  font-size: 5rem;
+  margin-bottom: 0;
+`
 
 const ItemsList = styled.div`
   display: grid;
@@ -37,6 +50,9 @@ const ItemsList = styled.div`
 class Items extends Component {
   render () {
     return (<Center>
+      <Title>Day Tripper Tours</Title>
+      <Intro>Welcome to Day Tripper Tours, the best place to find the perfect day tour in some of the most exciting and interesting places in the world. Our tours have been personally selected by <a href='http://www.yummypixels.co.uk/'>Yummy Pixels</a> and all have been tried and tested to guarantee the quality of service received.</Intro>
+      <Intro>Whether it is magnificent old temples, city tours or areas of outstanding beauty, we have the tour for you. Some of our favourites include a trip to Borobudur from Yogyakarta, Iguassu Falls in the far south of Brazil, the Banaue Rice Terraces in the Northern Philippines and not to forget Angkor Wat and surrounding temples from Siem Reap.</Intro>
       <Pagination page={this.props.page} />
       <Query
         query={ALL_ITEMS_QUERY}

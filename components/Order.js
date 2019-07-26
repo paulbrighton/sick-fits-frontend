@@ -65,7 +65,7 @@ class SingleOrder extends React.Component {
                 <span>{formatMoney(order.total)}</span>
               </p>
               <p>
-                <span>Item Count:</span>
+                <span>Tour Count:</span>
                 <span>{order.items.length}</span>
               </p>
               <div className="items">

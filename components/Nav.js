@@ -14,15 +14,15 @@ const Nav = () => (
     {({ data: { me } }) => (
       <NavStyles data-test='nav'>
         <Link href='/items'>
-          <a>Shop</a>
+          <a>Tours</a>
         </Link>
         {me && (
           <>
             <Link href='/sell'>
-            <a>Sell</a>
+            <a>Adverise</a>
             </Link>
             <Link href='/orders'>
-              <a>Orders</a>
+              <a>Bookings</a>
             </Link>
             <Signout />
             <Mutation mutation={TOGGLE_CART_MUTATION}>

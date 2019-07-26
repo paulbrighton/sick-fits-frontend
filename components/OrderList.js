@@ -41,7 +41,7 @@ class OrderList extends Component {
           console.log(orders)
           return (
             <div>
-              <h2>You have {orders.length} orders</h2>
+              <h2>You have {orders.length} booking{orders.length === 1 ? '' : 's'}</h2>
               <OrderUl>
                 {orders.map(order => (
                   <OrderItemStyles key={order.id}>
