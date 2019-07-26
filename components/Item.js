@@ -30,14 +30,14 @@ export default class Item extends Component {
       <PriceTag>{FormatMoney(item.price)}</PriceTag>
       <p>{item.description}</p>
       <div className='buttonList'>
-        <Link href={{
+        {/* <Link href={{
           pathname: 'update',
           query: { id: item.id },
         }}>
           <a>Edit ✏️</a>
-        </Link>
+        </Link> */}
         <AddToCart id={item.id}/>
-        <DeleteItem id={item.id}>Delete this Item</DeleteItem>
+        {/* <DeleteItem id={item.id}>Delete this Item</DeleteItem> */}
       </div>
     </ItemStyles>
   }
