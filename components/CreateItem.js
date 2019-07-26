@@ -5,6 +5,7 @@ import Router from 'next/router'
 import Form from './styles/Form'
 import formatMoney from '../lib/formatMoney'
 import Error from './ErrorMessage'
+import styled from 'styled-components'
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -24,6 +25,9 @@ const CREATE_ITEM_MUTATION = gql`
       id
     }
   }
+`
+const Email = styled.a`
+  color: ${props => props.theme.red};
 `
 
 class CreateItem extends Component {
@@ -76,6 +80,7 @@ class CreateItem extends Component {
           }}>
           <Error error={error} />
           <fieldset disabled={loading} aria-busy={loading}>
+          <p>If you would like to sell your tours on Day Tripper, please contact me by <Email href='mailto:info@not-a-real-email.com'>Email</Email></p>
           <label htmlFor='file'>
               Image
               <input 
