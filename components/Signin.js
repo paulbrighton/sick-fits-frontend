@@ -71,6 +71,7 @@ class Signin extends Component {
             </label>
             <button type='submit'>Sign In</button>
           </fieldset>
+          <p>Sign in to see the full functionality of the site using signin@signin.com for email and password for password.</p>
         </Form>
         )
       }

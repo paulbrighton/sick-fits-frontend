@@ -11,6 +11,12 @@ import CartItem from './CartItem'
 import calcTotalPrice from '../lib/calcTotalPrice'
 import formatMoney from '../lib/formatMoney'
 import TakeMyMoney from './TakeMyMoney'
+import styled from 'styled-components'
+
+const CardNumber = styled.p`
+  font-size: 1.2rem;
+  padding-top: 15px;
+`
 
 const LOCAL_STATE_QUERY = gql`
   query {
@@ -50,6 +56,7 @@ const Cart = () => (
                 <SickButton>Checkout</SickButton>
               </TakeMyMoney>
             )}
+            <CardNumber>You can use 4242 4242 4242 4242 as the credit card number to test the payment functionality.</CardNumber>
           </footer>
         </CartStyles>
       )
