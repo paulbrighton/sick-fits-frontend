@@ -38,6 +38,11 @@ const Title = styled.h1`
   line-height: 1.4;
 `
 
+const LoadingMessage = styled.p`
+  font-size: 1.8rem;
+  color: ${props => props.theme.red};
+`
+
 const ItemsList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -63,7 +68,7 @@ class Items extends Component {
         }}
       >
         {({ data, error, loading }) => {
-          if (loading) return <p>Server is waking up, please be patient...</p>
+          if (loading) return <LoadingMessage>Server is waking up, please be patient...</LoadingMessage>
           if (error) return <p>Error: {error.message}</p>
           return (<ItemsList>{data.items.map(item => <Item item={item} key={item.id} />)}</ItemsList>
           )
